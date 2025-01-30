@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca de Películas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Biblioteca de Películas</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#favoritos">Favoritos</a></li>
+                <li><a href="#generos">Géneros</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="search">
+            <input type="text" placeholder="Buscar películas..." id="search-bar">
+            <button id="search-button">Buscar</button>
+        </section>
+
+        <section class="movies" id="movie-list">
+            <!-- Película: Sonic -->
+            <article class="movie-card" data-synopsis="Una película llena de acción y aventura.">
+                <a href="SOUSEI NO ONMYOUJI/sousei_no_onmyouji.html" class="movie-link">
+                    <img src="img/cine-sonic-2.jpg" alt="Película 1" class="movie-image">
+                    <h2>Sonic 1, 2, 3</h2>
+                    <p>Año: 2020 - 2024</p>
+                    <p>Género: Acción / Aventura</p>
+                </a>
+            </article>
+
+            <!-- Película: SOUSEI NO ONMYOUJI -->
+            <article class="movie-card" data-synopsis="Rokuro procede de una familia de exorcistas, aunque preferiría ser futbolista, cantante o cualquier otra cosa antes que exorcista. Sin embargo la llegada de una chica llamada Benio despierta su espíritu competitivo y decide aprovechar su potencial como exorcista. Al final, al trabajar juntos se ganan el título de 'Exorcistas de las Estrellas Gemelas', y estarán destinados a casarse para tener un hijo que será el guerrero espiritual definitivo.">
+                <a href="SOUSEI NO ONMYOUJI/sousei no onmyouji.html" class="movie-link">
+                    <img src="img/SOUSEI NO ONMYOUJI.jpg" alt="Película 2" class="movie-image">
+                    <h2>SOUSEI NO ONMYOUJI</h2>
+                    <p>Año: 2016 - 2017</p>
+                    <p>Género: Sobrenatural / Shounen / Fantasía / Acción / Aventura</p>
+                </a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Biblioteca de Películas</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

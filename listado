@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Películas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1 id="saga-title">Películas Relacionadas</h1>
+        <a href="index.html">Volver al inicio</a>
+    </header>
+
+    <main>
+        <section class="movie-list" id="movie-list"></section>
+    </main>
+
+    <script>
+        // Datos de ejemplo (puedes cargarlos desde una base de datos más adelante)
+        const sagas = {
+            "sonic": ["Sonic La Película (2020)", "Sonic 2 (2022)", "Sonic 3 (2024)"]
+        };
+
+        // Obtener la saga desde la URL
+        const params = new URLSearchParams(window.location.search);
+        const saga = params.get("saga");
+
+        // Mostrar las películas
+        if (sagas[saga]) {
+            document.getElementById("saga-title").textContent = "Saga de " + saga.charAt(0).toUpperCase() + saga.slice(1);
+            const movieList = document.getElementById("movie-list");
+            sagas[saga].forEach((movie, index) => {
+                const item = document.createElement("p");
+                item.textContent = `${index + 1}. ${movie}`;
+                movieList.appendChild(item);
+            });
+        }
+    </script>
+
+</body>
+</html>

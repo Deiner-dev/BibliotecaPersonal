@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOUSEI NO ONMYOUJI</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #0f0;
+        }
+
+        header {
+            text-align: center;
+            padding: 1em 0;
+            background-color: #111;
+            border-bottom: 2px solid #0f0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #111;
+            border: 2px solid #0f0;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #0f0;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        a:hover {
+            color: #000;
+            background-color: #0f0;
+        }
+
+        iframe {
+            width: 640px;
+            height: 480px;
+            border: 2px solid #0f0;
+            margin: 20px auto; /* Centrado horizontal y margen superior */
+            display: none; /* Oculto hasta que se seleccione un capítulo */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #111;
+            border-top: 2px solid #0f0;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SOUSEI NO ONMYOUJI</h1>
+    </header>
+
+    <div class="container">
+        <h2>SOUSEI NO ONMYOUJI</h2>
+        <p>Año: 2016 - 2017</p>
+        <p>Género: Sobrenatural / Shounen / Fantasía / Acción / Aventura</p>
+        
+        <!-- Lista de capítulos -->
+        <ul class="chapter-list">
+            <li><a href="#" onclick="loadVideo('https://archive.org/embed/1_20250130_20250130_1952')">Capítulo 1</a></li>
+            <li><a href="#" onclick="loadVideo('https://archive.org/embed/2_20250130_20250130_2031')">Capítulo 2</a></li>
+            <li><a href="#" onclick="loadVideo('https://archive.org/embed/3_20250130_20250130_2050')">Capítulo 3</a></li>
+        </ul>
+
+        <!-- Iframe donde se mostrará el video -->
+        <iframe id="videoFrame"></iframe>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Biblioteca de Películas</p>
+    </footer>
+
+    <script>
+        function loadVideo(url) {
+            var iframe = document.getElementById("videoFrame");
+            iframe.src = url;
+            iframe.style.display = "block"; // Muestra el iframe al hacer clic
+        }
+    </script>
+
+</body>
+</html>
